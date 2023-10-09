@@ -9,7 +9,7 @@ from langchain.prompts import (
 
 
 st.set_page_config(page_title="LangChain: Simple chatbot", page_icon="🦜")
-st.title("Chatbot")
+st.title("Who should we draft - Dallas Cowboys")
 
 openai_api_key = st.sidebar.text_input("OpenAI API Key", type="password")
 
@@ -18,7 +18,7 @@ llm_prompt = ChatPromptTemplate(
     messages=[
         SystemMessagePromptTemplate.from_template(
             # This prompt tells the chatbot how to respond. Try modifying it.
-            "You are an AI assistant."
+            "You are a General Manager for the Dallas Cowboys and you are attending the NFL combine"
         ),
         HumanMessagePromptTemplate.from_template("{message}")
     ]
