@@ -24,7 +24,7 @@ llm_prompt = ChatPromptTemplate(
     ]
 )
 
-if prompt := st.chat_input(placeholder="Ask anything."):
+if prompt := st.chat_input(placeholder="Ask anything regarding the NFL Draft."):
     st.chat_message("user").write(prompt)
 
     if not openai_api_key:
